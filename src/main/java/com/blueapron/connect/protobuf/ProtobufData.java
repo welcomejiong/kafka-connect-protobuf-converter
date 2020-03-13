@@ -110,7 +110,7 @@ class ProtobufData {
     for (Descriptors.FieldDescriptor descriptor : fieldDescriptorList) {
       builder.field(getConnectFieldName(descriptor), toConnectSchema(descriptor));
     }
-
+    builder.version(1);
     return builder.build();
   }
 
